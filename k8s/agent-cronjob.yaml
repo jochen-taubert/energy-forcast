@@ -1,0 +1,36 @@
+# Agent prüft täglich nach dem Training. Er schlägt nur vor; Retrain/Rollback
+# landen in der Freigabe-Queue und werden erst nach menschlicher Freigabe ausgeführt.
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: energy-forecast-agent
+spec:
+  schedule: "30 7 * * *"
+  timeZone: Europe/Berlin
+  concurrencyPolicy: Forbid
+  jobTemplate:
+    spec:
+      backoffLimit: 1
+      template:
+        spec:
+          restartPolicy: Never
+          securityContext: { runAsNonRoot: true, runAsUser: 10001, fsGroup: 10001 }
+          containers:
+            - name: agent
+              image: ghcr.io/jochen-taubert/energy-forecast:training-latest
+              command: ["ef-agent", "run"]
+              env:
+                - name: ANTHROPIC_API_KEY
+                  valueFrom:
+                    secretKeyRef: { name: anthropic, key: api-key }
+              resources:
+                requests: { cpu: 200m, memory: 512Mi }
+                limits: { cpu: "1", memory: 1Gi }
+              volumeMounts:
+                - { name: models, mountPath: /models }
+                - { name: data, mountPath: /data, readOnly: true }
+          volumes:
+            - name: models
+              persistentVolumeClaim: { claimName: energy-forecast-models }
+            - name: data
+              persistentVolumeClaim: { claimName: energy-forecast-data }

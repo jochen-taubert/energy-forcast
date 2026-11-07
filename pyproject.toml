@@ -1,0 +1,66 @@
+[project]
+name = "energy-forecast"
+version = "0.1.0"
+description = "Stromlast-Prognose für Deutschland als produktiver ML-Service"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "pandas>=2.2",
+  "numpy>=1.26",
+  "scikit-learn>=1.5",
+  "lightgbm>=4.3",
+  "holidays>=0.50",
+  "joblib>=1.4",
+  "pyarrow>=16",
+]
+
+[project.optional-dependencies]
+# Schlankes Image für den API-Service
+serving = [
+  "fastapi>=0.111",
+  "uvicorn[standard]>=0.30",
+  "pydantic>=2.7",
+  "prometheus-client>=0.20",
+]
+# Training, Tracking, Orchestrierung
+training = [
+  "mlflow>=2.14",
+  "optuna>=3.6",
+  "requests>=2.32",
+  "prefect>=2.19",
+]
+# Kontrollierter MLOps-Agent (Claude Tool Use) und Freigabe-API
+agent = [
+  "anthropic>=0.40",
+  "fastapi>=0.111",
+  "uvicorn[standard]>=0.30",
+  "pydantic>=2.7",
+]
+dev = [
+  "energy-forecast[serving,training,agent]",
+  "pytest>=8",
+  "httpx>=0.27",
+  "ruff>=0.5",
+]
+
+[project.scripts]
+ef-train = "energy_forecast.models.train:main"
+ef-agent = "energy_forecast.agent.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/energy_forecast"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: energy-forecast-api
+  labels: { app: energy-forecast }
+spec:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate: { maxUnavailable: 0, maxSurge: 1 }
+  selector:
+    matchLabels: { app: energy-forecast }
+  template:
+    metadata:
+      labels: { app: energy-forecast }
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "8000"
+        prometheus.io/path: /metrics
+    spec:
+      securityContext: { runAsNonRoot: true, runAsUser: 10001 }
+      containers:
+        - name: api
+          image: ghcr.io/jochen-taubert/energy-forecast:serving-latest
+          ports: [{ containerPort: 8000 }]
+          resources:
+            requests: { cpu: 100m, memory: 256Mi }
+            limits: { cpu: "1", memory: 512Mi }
+          readinessProbe:
+            httpGet: { path: /health, port: 8000 }
+            initialDelaySeconds: 5
+          livenessProbe:
+            httpGet: { path: /health, port: 8000 }
+            periodSeconds: 20
+          volumeMounts:
+            - { name: models, mountPath: /models, readOnly: true }
+      volumes:
+        - name: models
+          persistentVolumeClaim: { claimName: energy-forecast-models }
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: energy-forecast-api
+spec:
+  selector: { app: energy-forecast }
+  ports: [{ port: 80, targetPort: 8000 }]

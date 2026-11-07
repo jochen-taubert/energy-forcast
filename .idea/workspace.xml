@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="794ba932-0303-4c14-a894-dec99e189beb" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="48" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;JochenTaubert&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/JochenTaubert/apetito.git&quot;,
+    &quot;accountId&quot;: &quot;43cb8e85-22b6-46e0-86b3-730be055fd76&quot;
+  }
+}</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3LmO4uL6QgciEl84rAgaRbH8r8T" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.zencoder-patch-add-chat-message-raw-content&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.zencoder-patch-generate-chat-message-id&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.zencoder-patch-migrate-custom-instruction&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/jtaubert/projects/energy-forecast&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="794ba932-0303-4c14-a894-dec99e189beb" name="Changes" comment="" />
+      <created>1794055588610</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1794055588610</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="ai.zencoder.plugin.mcp">
+    <option name="internalToolsState" value="{&quot;fetch_webpage&quot;:true,&quot;web_search&quot;:true,&quot;file_search&quot;:true,&quot;ExecuteShellCommand&quot;:true,&quot;str_replace_editor&quot;:true,&quot;FileDiagnosticsTool&quot;:true,&quot;fulltext_search&quot;:true,&quot;RequirementsTool&quot;:true}" />
+    <option name="libraryTools">
+      <map>
+        <entry key="agentql">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="agentrpc">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="aiven">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="apache iotdb">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="apify">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="apimatic mcp">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="astra db">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="aws kb retrieval">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="axiom">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="bankless onchain">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="bicscan">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="box">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="brave search">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="browserbase">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="chroma">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="circleci">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="clickhouse">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="cloudflare">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="codacy">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="codelogic">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="comet opik">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="context7">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="convex">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="e2b">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="elasticsearch">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="everart">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="everything">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="exa">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="fetch">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="fibery">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="filesystem">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="financial datasets">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="firecrawl">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="fireproof">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="forevervm">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="git">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="gitee">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="github">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="gitlab">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="google drive">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="google maps">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="grafana">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="graphlit">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="greptimedb">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="heroku">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="hologres">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="hyperbrowser">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="ibm wxflows">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="inkeep">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="integration app">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="jetbrains">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="kagi search">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="langfuse prompt management">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="logfire">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="mailgun">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="make">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="meilisearch">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="memory">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="metoro">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="milvus">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="momento">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="motherduck">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="needle">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="neo4j">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="neon">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="notion">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="oceanbase">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="octagon">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="oxylabs">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="paddle">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="paypal">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="perplexity">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="playwright">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="postgresql">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="puppeteer">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="qdrant">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="ramp">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="raygun">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="redis">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="riza">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="screenshotone">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="search1api">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="semgrep">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="sentry">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="sequential thinking">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="singlestore">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="slack">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="sqlite">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="starrocks">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="stripe">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="taskmaster-ai">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="tavily">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="thirdweb">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="tinybird">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="unifai">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="unstructured">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="vectorize">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="zapier">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+        <entry key="zenml">
+          <value>
+            <McpServerInfo />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="zencoderBackendTools">
+      <map>
+        <entry key="ExecuteShellCommand">
+          <value>
+            <McpServerInfo>
+              <option name="status">
+                <McpServerStatus />
+              </option>
+            </McpServerInfo>
+          </value>
+        </entry>
+        <entry key="FileDiagnosticsTool">
+          <value>
+            <McpServerInfo>
+              <option name="status">
+                <McpServerStatus />
+              </option>
+            </McpServerInfo>
+          </value>
+        </entry>
+        <entry key="RequirementsTool">
+          <value>
+            <McpServerInfo>
+              <option name="status">
+                <McpServerStatus />
+              </option>
+            </McpServerInfo>
+          </value>
+        </entry>
+        <entry key="fetch_webpage">
+          <value>
+            <McpServerInfo>
+              <option name="status">
+                <McpServerStatus />
+              </option>
+            </McpServerInfo>
+          </value>
+        </entry>
+        <entry key="file_search">
+          <value>
+            <McpServerInfo>
+              <option name="status">
+                <McpServerStatus />
+              </option>
+            </McpServerInfo>
+          </value>
+        </entry>
+        <entry key="fulltext_search">
+          <value>
+            <McpServerInfo>
+              <option name="status">
+                <McpServerStatus />
+              </option>
+            </McpServerInfo>
+          </value>
+        </entry>
+        <entry key="str_replace_editor">
+          <value>
+            <McpServerInfo>
+              <option name="status">
+                <McpServerStatus />
+              </option>
+            </McpServerInfo>
+          </value>
+        </entry>
+        <entry key="web_search">
+          <value>
+            <McpServerInfo>
+              <option name="status">
+                <McpServerStatus />
+              </option>
+            </McpServerInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="ai.zencoder.plugin.rag.RepoInfoWarningState">
+    <option name="currentWarningState" value="true" />
+    <option name="lastCheckTime" value="1794056668470" />
+  </component>
+</project>

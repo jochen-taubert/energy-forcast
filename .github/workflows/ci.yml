@@ -1,0 +1,76 @@
+name: CI
+
+on:
+  push: { branches: [main] }
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv venv && uv pip install -e ".[dev]"
+      - run: uv run ruff check . && uv run ruff format --check .
+      - run: uv run pytest -q
+
+  # Modell-Qualitäts-Gate: Training auf synthetischen Daten muss die Baseline schlagen
+  model-gate:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv venv && uv pip install -e ".[training]"
+      - run: uv run ef-train --synthetic --force
+      - run: |
+          uv run python - <<'EOF'
+          import json
+          m = json.load(open("models_store/metadata.json"))["all_metrics"]
+          assert m["lightgbm"]["mae"] < 0.8 * m["seasonal_naive"]["mae"], m
+          print("Model gate passed:", m["lightgbm"])
+          EOF
+
+  # Agent-Evaluation: Baseline immer, Claude nur wenn ein API-Schlüssel hinterlegt ist
+  agent-eval:
+    needs: test
+    runs-on: ubuntu-latest
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv venv && uv pip install -e ".[agent]"
+      - name: Baseline-Agent (regelbasiert)
+        run: uv run ef-agent eval --rules --min-accuracy 1.0
+      - name: Claude-Agent mit LLM-as-a-Judge
+        if: env.ANTHROPIC_API_KEY != ''
+        run: uv run ef-agent eval --judge --min-accuracy 0.8 --out eval-results.json
+      - uses: actions/upload-artifact@v4
+        if: always() && env.ANTHROPIC_API_KEY != ''
+        with:
+          name: agent-eval-results
+          path: eval-results.json
+
+  docker:
+    needs: [model-gate, agent-eval]
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions: { contents: read, packages: write }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - uses: docker/build-push-action@v6
+        with:
+          target: serving
+          push: true
+          tags: ghcr.io/${{ github.repository }}:serving-latest
+      - uses: docker/build-push-action@v6
+        with:
+          target: training
+          push: true
+          tags: ghcr.io/${{ github.repository }}:training-latest

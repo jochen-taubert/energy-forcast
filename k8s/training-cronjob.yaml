@@ -1,0 +1,50 @@
+# Tägliches Retraining. Promotet nur bei Verbesserung (Champion/Challenger).
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: energy-forecast-train
+spec:
+  schedule: "0 6 * * *"
+  timeZone: Europe/Berlin
+  concurrencyPolicy: Forbid
+  jobTemplate:
+    spec:
+      backoffLimit: 2
+      template:
+        spec:
+          restartPolicy: OnFailure
+          securityContext: { runAsNonRoot: true, runAsUser: 10001, fsGroup: 10001 }
+          containers:
+            - name: train
+              image: ghcr.io/jochen-taubert/energy-forecast:training-latest
+              env:
+                - { name: MLFLOW_TRACKING_URI, value: "http://mlflow:5000" }
+              resources:
+                requests: { cpu: 500m, memory: 1Gi }
+                limits: { cpu: "2", memory: 2Gi }
+              volumeMounts:
+                - { name: models, mountPath: /models }
+                - { name: data, mountPath: /data }
+          volumes:
+            - name: models
+              persistentVolumeClaim: { claimName: energy-forecast-models }
+            - name: data
+              persistentVolumeClaim: { claimName: energy-forecast-data }
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: energy-forecast-models
+spec:
+  accessModes: [ReadWriteMany]
+  resources:
+    requests: { storage: 1Gi }
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: energy-forecast-data
+spec:
+  accessModes: [ReadWriteMany]
+  resources:
+    requests: { storage: 2Gi }

@@ -1,0 +1,97 @@
+{
+    "checksum": "9167fb4668ac79c971050c6aecb46cb8f10c4c951c121f22229e753205d9d50f",
+    "data": {
+    "id": "6a474b49-1e6b-4775-9595-4c5b67ca317c",
+    "createdAt": 1794057336379,
+    "updatedAt": 1794057371435,
+    "title": "Repo Insight Summary",
+    "messages": [
+        {
+            "id": "8d366db5-8b66-4bdc-9e7d-a7b2a4b8f431",
+            "role": "user",
+            "content": [
+                {
+                    "type": "text",
+                    "text": "scan repo , what ist it about"
+                }
+            ],
+            "context": {
+                "currentFile": {
+                    "fsPath": "/home/jtaubert/projects/energy-forecast/README.md"
+                }
+            },
+            "createdAt": 1794057336393,
+            "isInternal": false,
+            "rawContent": {
+                "type": "doc",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "type": "text",
+                                "text": "scan repo , what ist it about"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "b3a61662-b213-4d2b-83cb-9a59f439dbf2",
+            "role": "user",
+            "content": [
+                {
+                    "type": "text",
+                    "text": "scan repo , what ist it about"
+                }
+            ],
+            "context": {
+                "currentFile": {
+                    "fsPath": "/home/jtaubert/projects/energy-forecast/README.md"
+                }
+            },
+            "createdAt": 1794057369762,
+            "isInternal": false,
+            "rawContent": {
+                "type": "doc",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "type": "text",
+                                "text": "scan repo , what ist it about"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "e94944c2-44fc-420b-a734-43d5d5ce094c",
+            "role": "system",
+            "content": [
+                {
+                    "type": "errorText",
+                    "text": "Ask organization administrator to upgrade your plan for higher limits or wait for your quota to reset on Nov 15, 11:34 PM",
+                    "title": "You ran out of credits",
+                    "actions": [
+                        {
+                            "type": "externalAction",
+                            "title": "Try again",
+                            "action": "regenerateLastAnswer"
+                        }
+                    ],
+                    "category": "limitReached"
+                }
+            ],
+            "createdAt": 1794057371435,
+            "isInternal": false
+        }
+    ],
+    "isNameGenerated": true,
+    "model": "gemini-3-1-pro-preview-customtools",
+    "lastUserMessageAt": 1794057369762
+}
+}
